@@ -100,7 +100,7 @@ class MainViewController: UIViewController {
         tableView.reloadData();
     }
     
-    func refresh(sender:AnyObject) {
+    @objc func refresh(sender:AnyObject) {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
             guard let refresher = sender as? UIRefreshControl else {
                 return
